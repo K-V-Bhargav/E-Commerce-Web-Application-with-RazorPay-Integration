@@ -1,0 +1,13 @@
+<div class="user-container">
+    <div class="user-card" *ngFor="let user of users">
+      <img [src]="user.Image" alt="User Image" class="user-image">
+      <div class="user-details">
+        <div class="amount">Amount: <span class="amount-value">{{ user.Amount }}</span></div>
+        <div class="description">Description: <span class="description-value">{{ user.Description }}</span></div>
+      </div>
+    </div>
+</div>
+<div class="button-container">
+    <button class="button" (click)="pay()">Pay</button>
+</div>
+  

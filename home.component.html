@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+    <div class="cart">
+        <i class="fa fa-shopping-cart fa-2x" (click)="navigate()" aria-hidden="true"></i>
+        <h1>{{counter}}</h1>
+    </div>
+</div>
+
+<div class="user-container">
+    <div class="user-card" *ngFor="let user of users">
+      <img [src]="user.Image" alt="User Image" class="user-image">
+      <div class="user-details">
+        <div class="amount">Amount: <span class="amount-value">{{user.Amount}}</span></div>
+        <div class="description">Description: <span class="description-value">{{user.Description}}</span></div>
+      </div>
+      <div class="button-container">
+        <button class="button" (click)="cart(user)">Add To Cart !!</button>
+      </div>
+      <div class="button-container">
+        <button class="button" (click)="buy(user)">Check Out !!</button>
+      </div>
+    </div>
+</div>
+
+
+  
